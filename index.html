@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Prashant Sahu</title>
+  <meta name="description" content="Personal portfolio website featuring projects, educational background, technical skills, certifications, and contact details.">
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Atmospheric Background Glow Elements -->
+  <div class="bg-glow-orb orb-1"></div>
+  <div class="bg-glow-orb orb-2"></div>
+  <div class="bg-glow-orb orb-3"></div>
+
+  <!-- ====================================================================
+       NAVIGATION HEADER
+       ==================================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="nav-brand">
+        <span class="brand-dot"></span>
+        <span id="nav-brand-name">Prashant Sahu</span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="nav-links">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills &amp; Certs</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle theme">
+          <!-- Moon Icon for dark mode -->
+          <svg class="theme-icon-dark" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <!-- Sun Icon for light mode -->
+          <svg class="theme-icon-light" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Anime Visual FX Toggle (Sakura Petals & Sparks) -->
+        <button id="anime-fx-btn" class="anime-fx-toggle-btn active" onclick="toggleAnimeFx()" aria-label="Toggle Anime Visual Effects" title="Toggle Anime FX (Sakura Petals & Sparks)">
+          <span>🌸</span>
+        </button>
+
+        <!-- Cyber AI Voice Assistant Toggle -->
+        <button id="voice-toggle-btn" class="voice-toggle-btn active" aria-label="Toggle AI Voice Assistant" title="AI Voice Assistant: Enabled (Speaks greeting to Prashant)">
+          <span class="voice-icon">🎙️</span>
+          <span class="voice-bars">
+            <span></span><span></span><span></span>
+          </span>
+        </button>
+
+        <a href="#contact" class="btn btn-primary btn-sm">Let's Talk</a>
+
+        <!-- Mobile Hamburger Button -->
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open Navigation Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-overlay" class="mobile-overlay"></div>
+  <aside id="mobile-nav-drawer" class="mobile-nav-drawer">
+    <a href="#home" class="nav-link">Home</a>
+    <a href="#about" class="nav-link">About</a>
+    <a href="#skills" class="nav-link">Skills &amp; Certs</a>
+    <a href="#contact" class="nav-link">Contact</a>
+    <div style="margin-top: 20px;">
+      <a href="#contact" class="btn btn-primary" style="width: 100%;">Get In Touch</a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- ====================================================================
+         1. HOME SECTION ("First Page")
+         ==================================================================== -->
+    <section id="home" class="hero-section">
+      <!-- Atmospheric Anime Cyber City Backdrop -->
+      <div class="hero-anime-backdrop"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <!-- Availability Badge & Anime Sub-tag -->
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <div class="status-badge">
+              <span class="status-pulse"></span>
+              <span id="status-badge-text">⚡ SYSTEM: ONLINE • AVAILABLE</span>
+            </div>
+            <span class="anime-kanji-sub">ようこそ // WELCOME</span>
+          </div>
+
+          <!-- Headline & Introduction -->
+          <div class="hero-title-wrap">
+            <span class="hero-greeting">Hi there, I'm</span>
+            <h1 class="hero-name" id="hero-name">Prashant Sahu</h1>
+            <h2 class="hero-role" id="hero-role">Software Developer &amp; Tech Enthusiast</h2>
+          </div>
+
+          <!-- 1-2 Line Intro -->
+          <p class="hero-intro" id="hero-intro">
+            Passionate about engineering scalable web applications, crafting intuitive user experiences, and exploring cutting-edge technologies to solve real-world problems.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">
+              <span>Get In Touch</span>
+              <span>→</span>
+            </a>
+            <a href="#about" class="btn btn-outline">
+              <span>Explore About</span>
+            </a>
+            <a href="#contact" id="resume-btn" class="btn btn-outline">
+              <span>📄 Resume</span>
+            </a>
+          </div>
+
+          <!-- Quick Social Chips -->
+          <div class="hero-social-chips">
+            <span>Connect:</span>
+            <div id="hero-social-chips-list" style="display: flex; gap: 8px; flex-wrap: wrap;"></div>
+          </div>
+        </div>
+
+        <!-- Avatar Image Frame -->
+        <div class="hero-image-wrap">
+          <div class="avatar-container">
+            <div class="avatar-glow-ring"></div>
+            <div class="avatar-border-frame">
+              <div class="avatar-img-box">
+                <!-- User's photo will appear here -->
+                <img id="hero-avatar" src="assets/images/avatar-placeholder.svg" alt="Profile Photo">
+                <!-- Text Initials alternative if text mode is selected -->
+                <div id="hero-avatar-text" class="avatar-text-monogram" style="display: none;">PS</div>
+              </div>
+              <!-- Interactive Photo / Text Switcher Button -->
+              <button id="change-avatar-btn" class="avatar-edit-overlay-btn" title="Change Photo or Switch to Text Initials">
+                <span>📷 Photo / Text</span>
+              </button>
+            </div>
+
+            <!-- Floating Badges -->
+            <div class="avatar-floating-badge badge-top-right">
+              <span>🚀</span>
+              <span>Clean Code</span>
+            </div>
+            <div class="avatar-floating-badge badge-bottom-left">
+              <span>⚡</span>
+              <span>Fast &amp; Responsive</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         2. ABOUT SECTION ("Second Page")
+         ==================================================================== -->
+    <section id="about" class="section">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <div class="anime-kanji-sub">自己紹介 // BACKGROUND</div><br>
+          <div class="section-badge">About Me</div>
+          <h2 class="section-title">Personal Journey &amp; <span class="text-gradient">Background</span></h2>
+          <p class="section-desc">A snapshot of my education, academic milestones, personal interests, and achievements.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Bio Summary Card -->
+          <div class="about-bio-card card-glass" id="about-bio-container">
+            <!-- Dynamic Bio Paragraphs -->
+          </div>
+
+          <!-- Educational Details Timeline -->
+          <div>
+            <h3 class="about-sub-heading">
+              <span>🎓</span>
+              <span>Educational Journey</span>
+            </h3>
+            <div class="timeline" id="education-timeline">
+              <!-- Dynamically populated from portfolio-data.js -->
+            </div>
+          </div>
+
+          <!-- Hobbies and Interests -->
+          <div>
+            <h3 class="about-sub-heading">
+              <span>✨</span>
+              <span>Hobbies &amp; Interests</span>
+            </h3>
+            <div class="hobbies-grid" id="hobbies-grid">
+              <!-- Dynamically populated from portfolio-data.js -->
+            </div>
+          </div>
+
+          <!-- Achievements -->
+          <div>
+            <h3 class="about-sub-heading">
+              <span>🏆</span>
+              <span>Honors &amp; Achievements</span>
+            </h3>
+            <div class="achievements-grid" id="achievements-grid">
+              <!-- Dynamically populated from portfolio-data.js -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         3. SKILLS & CERTIFICATIONS SECTION ("Third Page")
+         ==================================================================== -->
+    <section id="skills" class="section">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <div class="anime-kanji-sub">技術力 // CAPABILITIES</div><br>
+          <div class="section-badge">Capabilities</div>
+          <h2 class="section-title">Technical Skills &amp; <span class="text-gradient">Certifications</span></h2>
+          <p class="section-desc">Technologies, frameworks, and verified credentials I've mastered and applied.</p>
+        </div>
+
+        <!-- Filter Category Tabs -->
+        <div class="skills-filter-tabs" id="skills-filter-tabs">
+          <!-- Dynamically populated tabs -->
+        </div>
+
+        <!-- Skills Progress Grid -->
+        <div class="skills-grid" id="skills-grid">
+          <!-- Dynamically populated skills -->
+        </div>
+
+        <!-- Certifications Gallery -->
+        <div>
+          <h3 class="cert-section-title">
+            <span>📜 Verified Certifications &amp; Credentials</span>
+          </h3>
+          <div class="certs-grid" id="certs-grid">
+            <!-- Dynamically populated certifications -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         4. CONTACT SECTION ("Fourth Page")
+         ==================================================================== -->
+    <section id="contact" class="section">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <div class="anime-kanji-sub">通信開始 // ESTABLISH LINK</div><br>
+          <div class="section-badge">Get In Touch</div>
+          <h2 class="section-title">Let's Build Something <span class="text-gradient">Great</span></h2>
+          <p class="section-desc">Feel free to connect directly via social media, call, email, or send a message below.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left Column: Contact & Social Info -->
+          <div class="contact-info-col">
+            <!-- Phone Card -->
+            <div class="contact-card-item card-glass">
+              <div class="contact-card-left">
+                <div class="contact-icon-box">📞</div>
+                <div class="contact-card-content">
+                  <h5>Phone Number</h5>
+                  <p><a id="contact-phone-link" href="tel:+919876543210"><span id="contact-phone-display">+91 98765 43210</span></a></p>
+                </div>
+              </div>
+              <button id="copy-phone-btn" class="copy-btn" title="Copy Phone Number">
+                <span>📋 Copy</span>
+              </button>
+            </div>
+
+            <!-- Email Card -->
+            <div class="contact-card-item card-glass">
+              <div class="contact-card-left">
+                <div class="contact-icon-box">✉️</div>
+                <div class="contact-card-content">
+                  <h5>Email Address</h5>
+                  <p><a id="contact-email-link" href="mailto:prashantsahu.dev@example.com"><span id="contact-email-display">prashantsahu.dev@example.com</span></a></p>
+                </div>
+              </div>
+              <button id="copy-email-btn" class="copy-btn" title="Copy Email Address">
+                <span>📋 Copy</span>
+              </button>
+            </div>
+
+            <!-- Location Card -->
+            <div class="contact-card-item card-glass">
+              <div class="contact-card-left">
+                <div class="contact-icon-box">📍</div>
+                <div class="contact-card-content">
+                  <h5>Current Location</h5>
+                  <p id="contact-address-display">New Delhi, India</p>
+                </div>
+              </div>
+              <span style="font-size: 0.85rem; color: var(--accent-emerald); font-weight: 600;">Available Remote</span>
+            </div>
+
+            <!-- Social Links Card (LinkedIn, GitHub, Instagram) -->
+            <div class="social-platforms-card card-glass">
+              <h4>Social Profiles</h4>
+              <div class="social-links-list" id="contact-socials-list">
+                <!-- Dynamically populated from portfolio-data.js -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Contact Form -->
+          <div class="contact-form-card card-glass">
+            <h3>Send a Message</h3>
+            <p>Have an idea or opportunity? Send me a note and I'll get back to you promptly.</p>
+
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label class="form-label" for="form-name">Your Full Name *</label>
+                <input type="text" id="form-name" class="form-input" placeholder="e.g. John Doe" required>
+                <span class="form-error">Please enter your name</span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="form-email">Your Email Address *</label>
+                <input type="email" id="form-email" class="form-input" placeholder="e.g. john@example.com" required>
+                <span class="form-error">Please enter a valid email address</span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="form-subject">Subject *</label>
+                <input type="text" id="form-subject" class="form-input" placeholder="e.g. Project Collaboration / Job Opportunity" required>
+                <span class="form-error">Please enter a subject</span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="form-message">Message *</label>
+                <textarea id="form-message" class="form-input" placeholder="Write your message here..." rows="4" required></textarea>
+                <span class="form-error">Please enter your message</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <span>Send Message</span>
+                <span>✉️</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================================================================
+       FOOTER
+       ==================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="brand-dot"></span>
+          <span id="footer-brand-name">Prashant Sahu</span>
+        </div>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="footer-year">2026</span> All rights reserved. Designed for clean customization.</p>
+        <p>Built with HTML5, CSS3 &amp; JavaScript</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button id="back-to-top-btn" class="back-to-top" aria-label="Back to Top" title="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Certificate Preview Modal Lightbox -->
+  <div id="cert-modal" class="modal-overlay">
+    <div class="modal-dialog">
+      <button id="modal-close-btn" class="modal-close-btn" aria-label="Close dialog">&times;</button>
+      <div class="modal-body">
+        <div class="modal-img-wrap">
+          <img id="modal-cert-img" src="assets/images/cert-placeholder.svg" alt="Certificate Preview">
+        </div>
+        <div class="modal-header">
+          <h3 id="modal-cert-title">Certificate Name</h3>
+          <div id="modal-cert-issuer" class="modal-issuer">Issuer • Date</div>
+        </div>
+        <div>
+          <a id="modal-cert-link" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+            <span>Verify Original Credential ↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Quick Edit / Customizer Button -->
+  <button id="customizer-toggle-btn" class="customizer-toggle-btn" title="Customize Your Website">
+    <span>✏️ Edit Details</span>
+  </button>
+
+  <!-- Avatar (Photo / Text) Customizer Modal -->
+  <div id="avatar-modal" class="modal-overlay">
+    <div class="modal-dialog" style="max-width: 520px;">
+      <button id="avatar-modal-close-btn" class="modal-close-btn" aria-label="Close dialog">&times;</button>
+      <div class="modal-body">
+        <div class="modal-header" style="text-align: center; margin-bottom: 20px;">
+          <h3 style="font-size: 1.4rem;">Choose Avatar: Photo or Text</h3>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">You can upload your own photo, enter a link, or display stylish text initials.</p>
+        </div>
+
+        <!-- Live Preview Circle -->
+        <div class="avatar-preview-circle" id="modal-avatar-preview-box">
+          <img id="modal-avatar-preview-img" src="assets/images/avatar-placeholder.svg" alt="Avatar Preview">
+          <div id="modal-avatar-preview-text" class="avatar-text-monogram" style="display: none; font-size: 2.8rem;">PS</div>
+        </div>
+
+        <!-- Mode Selection Tabs -->
+        <div class="avatar-type-switcher" style="grid-template-columns: repeat(4, 1fr);">
+          <button type="button" class="avatar-choice-btn active" id="choice-btn-anime">🌸 Anime Art</button>
+          <button type="button" class="avatar-choice-btn" id="choice-btn-upload">📁 Upload</button>
+          <button type="button" class="avatar-choice-btn" id="choice-btn-url">🔗 URL</button>
+          <button type="button" class="avatar-choice-btn" id="choice-btn-text">🔤 Initials</button>
+        </div>
+
+        <!-- Option 0: Anime Presets -->
+        <div id="avatar-anime-pane" style="display: block; margin-bottom: 20px;">
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 12px; text-align: center;">Pick a stylish anime avatar preset:</p>
+          <div class="anime-preset-grid">
+            <div class="anime-preset-card active" data-img="assets/images/anime-dev-male.jpg">
+              <img src="assets/images/anime-dev-male.jpg" alt="Cyberpunk Male Dev">
+              <span>⚡ Neo Coder</span>
+            </div>
+            <div class="anime-preset-card" data-img="assets/images/anime-dev-female.jpg">
+              <img src="assets/images/anime-dev-female.jpg" alt="Cyberpunk Girl Dev">
+              <span>🎧 Cyber Hacker</span>
+            </div>
+            <div class="anime-preset-card" data-img="assets/images/avatar-placeholder.svg">
+              <img src="assets/images/avatar-placeholder.svg" alt="Minimal Silhouette">
+              <span>🚀 Minimalist</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Option 1: File Upload -->
+        <div id="avatar-upload-pane" style="display: none; margin-bottom: 20px;">
+          <label class="form-label" for="avatar-file-input">Select image from your device:</label>
+          <input type="file" id="avatar-file-input" accept="image/*" class="form-input" style="padding: 10px;">
+          <small style="color: var(--text-muted); display: block; margin-top: 6px;">Supports JPG, PNG, WEBP, or SVG.</small>
+        </div>
+
+        <!-- Option 2: URL or Path -->
+        <div id="avatar-url-pane" style="display: none; margin-bottom: 20px;">
+          <label class="form-label" for="avatar-url-input">Local path or web image URL:</label>
+          <input type="text" id="avatar-url-input" class="form-input" placeholder="e.g. assets/images/my-photo.jpg">
+          <small style="color: var(--text-muted); display: block; margin-top: 6px;">Relative path in your project or any HTTPS image link.</small>
+        </div>
+
+        <!-- Option 3: Text Initials -->
+        <div id="avatar-text-pane" style="display: none; margin-bottom: 20px;">
+          <label class="form-label" for="avatar-text-input">Display your initials (1-4 letters):</label>
+          <input type="text" id="avatar-text-input" class="form-input" placeholder="e.g. PS" maxlength="4">
+          <small style="color: var(--text-muted); display: block; margin-top: 6px;">Displays a high-resolution gradient monogram instead of a photo.</small>
+        </div>
+
+        <!-- Modal Actions -->
+        <div class="customizer-actions">
+          <button type="button" id="avatar-reset-btn" class="btn btn-outline btn-sm">Reset Default</button>
+          <button type="button" id="avatar-apply-btn" class="btn btn-primary btn-sm">Apply &amp; Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Edit Details Modal -->
+  <div id="customizer-modal" class="modal-overlay">
+    <div class="modal-dialog customizer-modal">
+      <button id="customizer-close-btn" class="modal-close-btn" aria-label="Close dialog">&times;</button>
+      <div class="modal-body">
+        <div class="modal-header" style="margin-bottom: 16px;">
+          <h3 style="font-size: 1.4rem;">✏️ Edit Website Details</h3>
+          <p style="color: var(--text-secondary); font-size: 0.88rem;">Update your information directly in your browser. Changes are saved automatically!</p>
+        </div>
+
+        <!-- Customizer Tabs -->
+        <div class="customizer-tabs">
+          <button type="button" class="customizer-tab-btn active" data-tab="tab-personal">Personal Info</button>
+          <button type="button" class="customizer-tab-btn" data-tab="tab-contact">Contact &amp; Social</button>
+        </div>
+
+        <!-- Tab 1: Personal Info -->
+        <div id="tab-personal" class="customizer-tab-content active">
+          <div class="form-group">
+            <label class="form-label" for="edit-name">Full Name</label>
+            <input type="text" id="edit-name" class="form-input" placeholder="Your Name">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="edit-role">Professional Title / Role</label>
+            <input type="text" id="edit-role" class="form-input" placeholder="e.g. Software Developer &amp; Tech Enthusiast">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="edit-status">Availability Status Badge</label>
+            <input type="text" id="edit-status" class="form-input" placeholder="e.g. Available for new opportunities">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="edit-intro">1-2 Line Intro (Home Page)</label>
+            <textarea id="edit-intro" class="form-input" rows="3" placeholder="A brief 1-2 line intro about yourself"></textarea>
+          </div>
+        </div>
+
+        <!-- Tab 2: Contact & Social -->
+        <div id="tab-contact" class="customizer-tab-content">
+          <div class="form-group">
+            <label class="form-label" for="edit-phone">Phone Number</label>
+            <input type="text" id="edit-phone" class="form-input" placeholder="+91 98765 43210">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="edit-email">Email Address</label>
+            <input type="email" id="edit-email" class="form-input" placeholder="you@example.com">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="edit-location">Location / City</label>
+            <input type="text" id="edit-location" class="form-input" placeholder="e.g. New Delhi, India">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="edit-linkedin">LinkedIn URL</label>
+            <input type="url" id="edit-linkedin" class="form-input" placeholder="https://www.linkedin.com/in/username">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="edit-github">GitHub URL</label>
+            <input type="url" id="edit-github" class="form-input" placeholder="https://github.com/username">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="edit-instagram">Instagram URL</label>
+            <input type="url" id="edit-instagram" class="form-input" placeholder="https://instagram.com/username">
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="customizer-actions">
+          <button type="button" id="customizer-reset-btn" class="btn btn-outline btn-sm">Reset Defaults</button>
+          <button type="button" id="customizer-export-btn" class="btn btn-outline btn-sm" title="Download updated portfolio-data.js">📥 Export JS File</button>
+          <button type="button" id="customizer-save-btn" class="btn btn-primary btn-sm">💾 Save &amp; Apply</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="portfolio-data.js"></script>
+  <script src="assets/js/anime-effects.js"></script>
+  <script src="assets/js/voice-assistant.js"></script>
+  <script src="assets/js/contact.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,261 @@
+/* ====================================================================
+   PORTFOLIO WEBSITE - RESPONSIVE STYLESHEET
+   Mobile, Tablet, and Small Screen Adaptations
+   ==================================================================== */
+
+/* Large Tablets & Small Laptops (<= 1024px) */
+@media screen and (max-width: 1024px) {
+  .hero-grid {
+    gap: 40px;
+  }
+
+  .hero-name {
+    font-size: 3rem;
+  }
+
+  .avatar-container {
+    width: 290px;
+    height: 290px;
+  }
+
+  .badge-top-right {
+    right: -10px;
+  }
+
+  .badge-bottom-left {
+    left: -10px;
+  }
+
+  .contact-grid {
+    gap: 32px;
+  }
+}
+
+/* Tablets Portrait & Mobile Devices (<= 768px) */
+@media screen and (max-width: 768px) {
+  :root {
+    --nav-height: 68px;
+  }
+
+  .section {
+    padding: 70px 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  /* Navigation adjustments */
+  .nav-links,
+  .nav-actions .btn-sm {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-nav-drawer {
+    display: flex;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    min-height: auto;
+    padding-top: calc(var(--nav-height) + 30px);
+    padding-bottom: 60px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 48px;
+  }
+
+  .hero-content {
+    align-items: center;
+  }
+
+  .hero-name {
+    font-size: 2.5rem;
+  }
+
+  .hero-role {
+    font-size: 1.3rem;
+  }
+
+  .hero-intro {
+    font-size: 1.05rem;
+  }
+
+  .hero-actions {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .hero-social-chips {
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .avatar-container {
+    width: 260px;
+    height: 260px;
+  }
+
+  .avatar-floating-badge {
+    padding: 6px 12px;
+    font-size: 0.78rem;
+  }
+
+  .badge-top-right {
+    top: -5px;
+    right: 0px;
+  }
+
+  .badge-bottom-left {
+    bottom: -5px;
+    left: 0px;
+  }
+
+  /* About Section */
+  .about-bio-card {
+    padding: 24px 20px;
+  }
+
+  .timeline {
+    padding-left: 24px;
+  }
+
+  .timeline-dot {
+    left: -24px;
+    width: 16px;
+    height: 16px;
+    top: 22px;
+  }
+
+  .timeline-card {
+    padding: 20px;
+  }
+
+  .timeline-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .hobbies-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Skills & Certs Section */
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .certs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contact Section */
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-card {
+    padding: 24px 20px;
+  }
+
+  .contact-card-item {
+    padding: 16px;
+  }
+
+  /* Footer */
+  .footer-top {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
+
+/* Small Smart Phones (<= 480px) */
+@media screen and (max-width: 480px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hero-name {
+    font-size: 2.1rem;
+  }
+
+  .hero-role {
+    font-size: 1.15rem;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .avatar-container {
+    width: 220px;
+    height: 220px;
+  }
+
+  .badge-top-right,
+  .badge-bottom-left {
+    display: none; /* Hide floating badges on very narrow screens for clean look */
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .skills-filter-tabs {
+    gap: 8px;
+  }
+
+  .filter-btn {
+    padding: 7px 14px;
+    font-size: 0.82rem;
+  }
+
+  .contact-card-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .copy-btn {
+    align-self: flex-end;
+  }
+
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+  }
+}
